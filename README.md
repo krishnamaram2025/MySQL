@@ -1,7 +1,7 @@
 MySQL server Installation and  Set Up
 ======================================
 * Step 1: Login to mysql instance and execute the below steps
-  ```
+```
 sudo yum update -y && sudo yum install wget -y && sudo yum install git -y
 ```
 * Step 2:Install MySQL server
