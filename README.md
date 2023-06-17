@@ -16,6 +16,8 @@ sudo grep 'temporary password' /var/log/mysqld.log
 * Step 3: Secure MySQL server
 ```
 sudo mysql_secure_installation
+uncomment the below in vi /etc/my.cnf
+default-authentication-plugin=mysql_native_password
 ```
 * Step 4: Login to MySQL server
 ```
@@ -24,7 +26,7 @@ mysql -u root -p
 * Step 5: create database with name indigo and user with name cloud
 ```
 CREATE DATABASE indigo;
-CREATE USER 'cloud'@'%' IDENTIFIED BY 'Cloud@123';
+CREATE USER 'cloud'@'%' IDENTIFIED WITH mysql_native_password BY 'Cloud@123';
 GRANT ALL ON *.* TO 'cloud'@'%';
 FLUSH PRIVILEGES;
 ```
