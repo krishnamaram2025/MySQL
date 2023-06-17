@@ -6,8 +6,9 @@ sudo yum update -y && sudo yum install wget -y && sudo yum install git -y
 ```
 * Step 2:Install MySQL server
 ```
-sudo wget https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
-sudo rpm -Uvh mysql80-community-release-el7-1.noarch.rpm
+curl -sSLO https://dev.mysql.com/get/mysql80-community-release-el7-5.noarch.rpm
+md5sum mysql80-community-release-el7-5.noarch.rpm
+sudo rpm -ivh mysql80-community-release-el7-5.noarch.rpm
 sudo yum install mysql-server -y
 sudo systemctl start mysqld
 sudo grep 'temporary password' /var/log/mysqld.log
