@@ -25,8 +25,12 @@ mysql -u root -p
 ```
 * Step 5: create database with name indigo and user with name cloud
 ```
-CREATE DATABASE indigo;
+CREATE DATABASE csit;
 CREATE USER 'cloud'@'%' IDENTIFIED WITH mysql_native_password BY 'Cloud@123';
 GRANT ALL ON *.* TO 'cloud'@'%';
 FLUSH PRIVILEGES;
+```
+* Step 6: import database tables
+```
+mysql -u cloud -p csit < csit.sql
 ```
