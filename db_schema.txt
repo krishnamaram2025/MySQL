@@ -1,0 +1,20 @@
+###############  csit.clusters_info table ##################
+CREATE TABLE clusters_info(
+                cluster_id VARCHAR(255) PRIMARY KEY,
+                environment VARCHAR(25),
+                region VARCHAR(50),
+                cluster_status VARCHAR(25),
+                cloud_provider VARCHAR(50)
+                );
+
+insert into csit.clusters_info(cluster_id, environment, region, cloud_provider) values ('CSAWSLINUX01', 'dev', 'us-east-1', 'aws');
+###############  csit.clusters_failure table ##################
+CREATE TABLE clusters_failure(
+                cluster_id VARCHAR(255) PRIMARY KEY,
+                environment VARCHAR(25),
+                region VARCHAR(50),
+                cloud_provider VARCHAR(50),
+                error_message VARCHAR(250)
+                );
+
+insert into csit.clusters_failure(cluster_id, environment, region, cloud_provider, error_message) values ('CSAWSLINUX01', 'dev', 'us-east-1', 'aws', 'AWS site provisioning failed today');
