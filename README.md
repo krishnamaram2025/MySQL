@@ -32,5 +32,6 @@ FLUSH PRIVILEGES;
 ```
 * Step 6: import database tables
 ```
+git clone https://github.com/krishnamaram2025/MySQL.git && cd MySQL
 mysql -u cloud -p csit < csit.sql
 ```
